@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#061225">
+  <meta name="description" content="남성 건강 상담을 위한 프라이빗 온라인 예약 안내. 상담 절차와 개인정보 처리 기준을 명확하게 확인하세요.">
+  <title>MENHANCE | 프라이빗 남성 건강 상담</title>
+  <style>
+    :root{color-scheme:dark;--bg:#050d1b;--bg2:#08172b;--panel:#0b1c33;--panel2:#0d2541;--line:rgba(117,202,255,.2);--cyan:#55eaff;--blue:#328fff;--white:#f4f9ff;--muted:#a9bdd2;--ok:#a2f4df;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,"Pretendard","Noto Sans KR",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}.wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:30;background:rgba(4,12,25,.88);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-weight:950;letter-spacing:.15em;font-size:1.08rem}.logo span{color:var(--cyan)}.navlinks{display:flex;align-items:center;gap:26px;font-size:.9rem;color:#c5d7e8}.navlinks a:hover,.footer-links a:hover{color:var(--cyan)}
+    .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 22px;border-radius:999px;border:1px solid transparent;font-weight:850;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}.btn-primary{color:#03101c;background:linear-gradient(110deg,#55eaff,#9af5ff);box-shadow:0 0 28px rgba(85,234,255,.16)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(85,234,255,.28)}.btn-ghost{border-color:rgba(117,202,255,.36);background:rgba(14,42,72,.55);color:#f1fbff}.btn-ghost:hover{border-color:var(--cyan)}.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+    .hero{position:relative;overflow:hidden;padding:78px 0 68px;background:radial-gradient(ellipse at 78% 42%,rgba(0,127,255,.2),transparent 38%),linear-gradient(135deg,#061225,#081a31 58%,#04101f)}.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(75,169,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(75,169,255,.045) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,#000,transparent)}.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:30px}.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:99px;padding:7px 13px;color:var(--cyan);font-size:.75rem;letter-spacing:.13em;background:rgba(5,24,46,.68)}.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}h1{font-size:clamp(2.55rem,5vw,4.65rem);line-height:1.14;letter-spacing:-.055em;margin:23px 0 20px;font-weight:950}h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 28px rgba(85,234,255,.16)}.lead{font-size:1.06rem;color:#c3d6e9;max-width:560px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 18px}.microcopy{font-size:.78rem;color:#8faac4}
+    .visual{position:relative;min-height:465px;display:grid;place-items:center}.orbit{position:absolute;width:min(100%,440px);aspect-ratio:1;border:1px solid rgba(85,234,255,.35);border-radius:50%;box-shadow:0 0 45px rgba(0,145,255,.1),inset 0 0 45px rgba(0,145,255,.08)}.orbit:before,.orbit:after{content:"";position:absolute;inset:8%;border:1px dashed rgba(85,234,255,.28);border-radius:50%}.orbit:after{inset:20%;border-style:solid;opacity:.65}.human{position:relative;width:min(100%,365px);filter:drop-shadow(0 0 22px rgba(25,157,255,.55));z-index:1}.scan-label{position:absolute;border:1px solid rgba(85,234,255,.4);background:rgba(4,19,39,.86);padding:11px 14px;border-radius:12px;color:#d3faff;font-size:.75rem;backdrop-filter:blur(8px);z-index:2}.scan-label b{display:block;color:var(--cyan);font-size:.69rem;letter-spacing:.12em;margin-bottom:3px}.label-a{top:13%;right:0}.label-b{bottom:13%;left:0}.label-c{right:0;bottom:26%}
+    .trustbar{border-block:1px solid var(--line);background:#07152a}.trustgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:22px 0}.trustitem{display:flex;gap:13px;align-items:center}.trusticon{width:42px;height:42px;display:grid;place-items:center;flex:none;border:1px solid rgba(85,234,255,.36);border-radius:13px;color:var(--cyan);font-size:1.15rem}.trustitem strong{display:block;font-size:.91rem}.trustitem small{display:block;color:var(--muted);font-size:.77rem}
+    section.content-section{padding:80px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 40px}.kicker{color:var(--cyan);letter-spacing:.18em;text-transform:uppercase;font-size:.73rem;font-weight:850}.section-head h2{font-size:clamp(1.9rem,3.5vw,2.9rem);letter-spacing:-.045em;line-height:1.22;margin:12px 0}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{border:1px solid var(--line);border-radius:20px;padding:25px;background:linear-gradient(145deg,rgba(13,35,62,.92),rgba(6,19,36,.92));min-height:225px}.card-icon{font-size:1.5rem;color:var(--cyan)}.num{color:var(--cyan);font-size:.72rem;letter-spacing:.15em;margin-top:12px}.card h3{font-size:1.17rem;margin:13px 0 8px}.card p{color:var(--muted);font-size:.9rem;margin:0}
+    .process{background:linear-gradient(180deg,#061225,#07172b)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:23px;border-left:2px solid var(--cyan);background:rgba(10,32,57,.56)}.step span{font-size:.74rem;color:var(--cyan);letter-spacing:.13em}.step h3{margin:8px 0}.step p{margin:0;color:var(--muted);font-size:.88rem}
+    .booking-panel{border:1px solid rgba(85,234,255,.3);border-radius:26px;padding:clamp(24px,4.5vw,50px);background:radial-gradient(circle at 90% 15%,rgba(27,131,255,.2),transparent 35%),linear-gradient(135deg,#0b2340,#071326);display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}.booking-copy h2{font-size:clamp(1.85rem,3.3vw,2.7rem);line-height:1.22;margin:12px 0}.booking-copy p{color:var(--muted)}.promise-list{padding:0;list-style:none;display:grid;gap:10px;margin:24px 0}.promise-list li{display:flex;gap:10px;color:#d9e9f7;font-size:.9rem}.promise-list li:before{content:"✓";color:var(--cyan);font-weight:900}.form{display:grid;gap:10px}.form label{font-size:.85rem;font-weight:750;color:#d9e9f7}.form input:not([type=checkbox]),.form select,.form textarea{width:100%;min-height:48px;border:1px solid rgba(144,196,231,.28);border-radius:12px;background:#061326;color:var(--white);padding:12px 14px;outline:none}.form textarea{resize:vertical;min-height:90px}.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--cyan)}.form .field{display:grid;gap:6px}.consent{display:flex;gap:10px;align-items:flex-start;color:#b8cce0;font-size:.8rem;line-height:1.5;margin:7px 0}.consent input{width:18px;height:18px;flex:none;accent-color:var(--cyan);margin:2px 0 0}.form small{font-size:.73rem;color:#8ea7c0}.status{font-size:.86rem;color:var(--ok);min-height:1.4em}.demo-note{margin-top:22px;border:1px solid rgba(255,205,112,.23);background:rgba(255,205,112,.055);color:#d9c8a4;border-radius:12px;padding:13px 15px;font-size:.77rem}
+    .faq{max-width:820px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{font-weight:800;cursor:pointer}.faq details p{color:var(--muted);margin:11px 0 0;font-size:.92rem}
+    footer{border-top:1px solid var(--line);padding:29px 0 40px;color:#8ea5bc;font-size:.77rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-brand p{margin:7px 0}.mobile-cta{display:none}
+    @media(max-width:850px){.navlinks{display:none}.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr;gap:8px}.visual{min-height:370px;grid-row:1}.hero-copy{text-align:center}.lead{margin-inline:auto}.hero-actions{justify-content:center}.cards,.steps{grid-template-columns:1fr}.card{min-height:unset}.booking-panel{grid-template-columns:1fr}.trustgrid{gap:12px}.trustitem{align-items:flex-start}}
+    @media(max-width:560px){.wrap{width:calc(100% - 30px)}.nav{height:64px}.nav .btn{min-height:42px;padding:9px 14px;font-size:.81rem}.logo{font-size:.95rem}.hero{padding:29px 0 38px}.hero-grid{gap:0}.visual{min-height:300px}.human{width:270px}.orbit{width:290px}.scan-label{font-size:.62rem;padding:8px 9px}.scan-label b{font-size:.58rem}.label-a{right:-1px;top:6%}.label-b{bottom:5%;left:-1px}.label-c{bottom:20%;right:-1px}h1{font-size:clamp(2.3rem,10vw,3.3rem);margin-top:18px}.lead{font-size:.96rem}.hero-actions{gap:9px}.hero-actions .btn{width:100%}.trustgrid{grid-template-columns:1fr;padding:16px 0}.trustitem{align-items:center}.trusticon{width:38px;height:38px}section.content-section{padding:58px 0}.section-head{margin-bottom:28px}.card{padding:21px}.booking-panel{padding:22px 17px;border-radius:20px;gap:22px}.mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;padding:9px 14px calc(9px + env(safe-area-inset-bottom));background:rgba(4,12,25,.95);backdrop-filter:blur(15px);border-top:1px solid var(--line);z-index:40}.mobile-cta .btn{width:100%;min-height:46px}footer{padding-bottom:95px}.footer-row{flex-direction:column}}
+    @media(prefers-reduced-motion:no-preference){.orbit{animation:pulse 7s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.035);opacity:.76}}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="MENHANCE 홈">MEN<span>HANCE</span></a>
+    <nav class="navlinks" aria-label="주 메뉴"><a href="#service">서비스 안내</a><a href="#process">상담 절차</a><a href="#faq">자주 묻는 질문</a></nav>
+    <a class="btn btn-primary" href="#booking">상담 예약 <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> PRIVATE MEN'S WELLNESS</div>
+        <h1>나를 위한 건강 관리,<br><em>더 편안하고 프라이빗하게.</em></h1>
+        <p class="lead">민감한 건강 고민도 부담 없이 문의할 수 있도록. 상담 절차와 개인정보 처리 기준을 명확하게 안내하는 남성 건강 상담 페이지입니다.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#booking">비공개 상담 문의하기 <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#service">서비스 알아보기</a></div>
+        <p class="microcopy">온라인 문의 안내 · 개인정보 보호 우선 · 명확한 상담 절차</p>
+      </div>
+      <div class="visual" aria-label="파란색 홀로그램 인체를 표현한 장식 일러스트">
+        <div class="orbit"></div>
+        <svg class="human" viewBox="0 0 360 560" role="img" aria-label="추상적인 홀로그램 인체 일러스트">
+          <defs><linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b7fbff" stop-opacity=".82"/><stop offset=".48" stop-color="#178cff" stop-opacity=".35"/><stop offset="1" stop-color="#51eaff" stop-opacity=".72"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <g fill="url(#body)" stroke="#68eaff" stroke-width="1.2" filter="url(#glow)"><ellipse cx="180" cy="55" rx="34" ry="43"/><path d="M151 92 Q180 108 209 92 L224 126 Q249 134 267 159 L290 260 Q293 274 280 278 Q270 281 265 267 L240 192 L235 273 Q233 307 219 328 L231 453 Q233 470 219 473 Q204 475 201 458 L181 342 L163 458 Q160 475 145 473 Q131 470 133 453 L145 328 Q130 307 128 273 L123 192 L98 267 Q93 281 81 278 Q68 274 72 260 L94 159 Q112 134 136 126 Z"/><path d="M137 132 Q160 145 180 144 Q200 145 223 132 L211 189 L198 227 L180 238 L162 227 L149 189 Z" fill="#36bfff" fill-opacity=".18"/><path d="M145 237 Q180 250 215 237 L207 306 Q180 325 153 306 Z" fill="#45eaff" fill-opacity=".22"/><path d="M180 145 L180 318 M145 189 L163 227 L180 238 L198 227 L215 189 M153 262 L180 273 L207 262 M151 292 L180 302 L209 292" fill="none" stroke="#9bf8ff" stroke-width="1.4"/><path d="M142 145 Q180 163 218 145 M138 165 Q180 184 222 165 M140 185 Q180 204 220 185 M147 210 Q180 226 213 210" fill="none" stroke="#4ccfff" stroke-opacity=".85"/><path d="M157 344 L147 420 M203 344 L213 420 M147 420 L144 458 M213 420 L216 458" fill="none" stroke="#9bf8ff" stroke-width="1.3"/></g>
+          <g fill="none" stroke="#43e7ff" stroke-width="1" opacity=".7"><path d="M180 12V525" stroke-dasharray="3 7"/><ellipse cx="180" cy="275" rx="120" ry="205" stroke-dasharray="2 8"/><path d="M65 274H295M80 150H280M105 390H255"/></g><circle cx="180" cy="275" r="13" fill="#49eaff" opacity=".16"/><circle cx="180" cy="275" r="5" fill="#c8ffff"/>
+        </svg>
+        <div class="scan-label label-a"><b>PRIVATE CARE</b>개인정보 보호를 우선으로</div><div class="scan-label label-b"><b>PERSONAL GUIDE</b>상담 절차를 명확하게</div><div class="scan-label label-c"><b>ONLINE</b>편리한 온라인 문의</div>
+      </div>
+    </div>
+  </section>
+  <div class="trustbar"><div class="wrap trustgrid">
+    <div class="trustitem"><div class="trusticon" aria-hidden="true">◇</div><div><strong>프라이버시 우선</strong><small>개인정보 처리 기준을 투명하게 안내합니다.</small></div></div>
+    <div class="trustitem"><div class="trusticon" aria-hidden="true">◎</div><div><strong>간편한 문의 절차</strong><small>필요한 정보만 남기고 안내를 확인하세요.</small></div></div>
+    <div class="trustitem"><div class="trusticon" aria-hidden="true">⌁</div><div><strong>명확한 서비스 안내</strong><small>상담 범위와 다음 단계를 확인할 수 있습니다.</small></div></div>
+  </div></div>
+  <section class="content-section" id="service"><div class="wrap">
+    <div class="section-head"><div class="kicker">OUR APPROACH</div><h2>건강 상담의 첫걸음부터<br>편안하게</h2><p>부담은 낮추고 필요한 정보는 명확하게 전달하는 상담 경험을 지향합니다.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-icon" aria-hidden="true">⌘</div><div class="num">01 / PRIVATE</div><h3>프라이빗한 문의 환경</h3><p>개인적인 건강 고민을 문의하기 전에 개인정보 처리 기준과 상담 절차를 확인할 수 있습니다.</p></article>
+      <article class="card"><div class="card-icon" aria-hidden="true">⌬</div><div class="num">02 / PERSONAL</div><h3>상황에 맞는 상담 안내</h3><p>문의 주제에 따라 가능한 상담 방식과 다음 단계를 안내합니다. 의료적 판단은 자격을 갖춘 의료 전문가에게 확인해야 합니다.</p></article>
+      <article class="card"><div class="card-icon" aria-hidden="true">↗</div><div class="num">03 / SIMPLE</div><h3>간편한 온라인 예약 문의</h3><p>간단한 양식으로 예약 문의를 시작하고, 일정·비용·서비스 범위를 확인할 수 있습니다.</p></article>
+    </div>
+  </div></section>
+  <section class="content-section process" id="process"><div class="wrap">
+    <div class="section-head"><div class="kicker">HOW IT WORKS</div><h2>상담은 간단하게,<br>안내는 명확하게</h2><p>아래 단계는 기본 예시이며 실제 운영 방식에 맞게 확정해야 합니다.</p></div>
+    <div class="steps">
+      <article class="step"><span>STEP 01</span><h3>문의 양식 작성</h3><p>회신받을 연락처와 문의 주제를 남겨주세요. 첫 문의에서는 상세한 민감 의료 정보를 입력하지 마세요.</p></article>
+      <article class="step"><span>STEP 02</span><h3>일정 및 비용 확인</h3><p>운영팀이 실제 제공 가능한 상담 방식, 일정, 비용과 서비스 범위를 안내합니다.</p></article>
+      <article class="step"><span>STEP 03</span><h3>상담 진행</h3><p>확인된 절차에 따라 상담을 진행합니다. 진단·치료는 관련 자격과 법적 요건을 갖춘 의료기관 및 전문가를 통해야 합니다.</p></article>
+    </div>
+  </div></section>
+  <section class="content-section" id="booking"><div class="wrap">
+    <div class="booking-panel">
+      <div class="booking-copy"><div class="kicker">PRIVATE CONSULTATION</div><h2>나에게 필요한 안내,<br>지금 문의해 보세요.</h2><p>아래 양식은 예약 문의 화면의 시안입니다. 제출 버튼을 실제 접수 기능과 연결하기 전에는 고객 정보가 저장되거나 전송되지 않습니다.</p>
+        <ul class="promise-list"><li>문의 목적을 먼저 선택할 수 있습니다.</li><li>필요 이상의 민감 정보를 요구하지 않습니다.</li><li>운영 전 개인정보 처리방침을 확인할 수 있도록 구성합니다.</li></ul>
+        <div class="demo-note"><strong>운영 전 확인:</strong> 이 템플릿은 의료기관이나 의료진의 자격을 인증하지 않으며 의료 진단·치료를 제공하지 않습니다. 실제 서비스 범위와 법적 고지를 정확하게 반영하세요.</div>
+      </div>
+      <form class="form" id="contactForm">
+        <div class="field"><label for="topic">문의 주제 <span aria-hidden="true">*</span></label><select id="topic" name="topic" required><option value="">선택해 주세요</option><option value="예약 가능 일정">예약 가능 일정</option><option value="상담 절차">상담 절차</option><option value="비용 및 서비스 범위">비용 및 서비스 범위</option><option value="기타 문의">기타 문의</option></select></div>
+        <div class="field"><label for="name">성함 또는 호칭 (선택)</label><input id="name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="예: 홍길동"></div>
+        <div class="field"><label for="contact">회신받을 연락처 또는 이메일 <span aria-hidden="true">*</span></label><input id="contact" name="contact" type="text" autocomplete="email" maxlength="160" placeholder="전화번호 또는 이메일 주소" required></div>
+        <div class="field"><label for="time">선호 연락 시간 (선택)</label><select id="time" name="time"><option value="">선택 안 함</option><option>오전 09:00–12:00</option><option>오후 12:00–18:00</option><option>저녁 18:00–21:00</option></select></div>
+        <div class="field"><label for="message">문의 내용 (선택)</label><textarea id="message" name="message" maxlength="1000" rows="3" placeholder="예약 관련 질문을 적어주세요. 상세한 의료 정보는 입력하지 마세요."></textarea></div>
+        <label class="consent" for="consent"><input type="checkbox" id="consent" required><span><a href="#privacy-note" style="text-decoration:underline">개인정보 수집·이용 안내</a>를 확인했으며, 문의 회신을 위한 정보 제공에 동의합니다. 실제 운영 전에는 수집 항목·목적·보유 기간·거부 권리 등을 구체적으로 고지해야 합니다.</span></label>
+        <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label for="website">Leave this field empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"></div>
+        <button class="btn btn-primary" type="submit">예약 문의 제출 <span aria-hidden="true">→</span></button>
+        <small>현재는 시안입니다. 아래 버튼을 눌러도 입력 정보는 서버로 전송되지 않습니다.</small>
+        <div class="status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div></section>
+  <section class="content-section" id="faq"><div class="wrap"><div class="section-head"><div class="kicker">FAQ</div><h2>자주 묻는 질문</h2><p>실제 운영 정책이 확정되면 답변을 정확하게 수정해 주세요.</p></div>
+    <div class="faq">
+      <details><summary>온라인으로 예약 문의를 할 수 있나요?</summary><p>이 페이지는 온라인 예약 문의용 화면 예시입니다. 실제 문의 접수와 회신을 위해서는 서버 또는 예약 서비스 연결이 필요합니다.</p></details>
+      <details><summary>문의하면 바로 진단이나 처방을 받을 수 있나요?</summary><p>아닙니다. 문의 양식은 예약 안내를 위한 기능입니다. 진단·치료·처방은 관련 법령과 자격 요건을 충족하는 의료기관 및 의료 전문가를 통해 확인해야 합니다.</p></details>
+      <details><summary>개인정보는 어떻게 처리되나요?</summary><p>실제 운영자는 수집 항목, 이용 목적, 보유 기간, 처리 위탁, 파기 절차, 이용자 권리 및 문의처를 포함한 개인정보 처리방침을 마련하고 실제 데이터 처리 방식과 일치시켜야 합니다.</p></details>
+      <details><summary>예약 문의 후 언제 답변을 받을 수 있나요?</summary><p>응답 가능 시간과 예상 회신 기간은 실제 운영 정책을 확정한 후 이곳에 명시해야 합니다. 현재 템플릿에는 실제 회신 기능이 연결되어 있지 않습니다.</p></details>
+    </div>
+  </div></section>
+  <section class="content-section" id="privacy-note" style="padding-top:0"><div class="wrap"><div class="demo-note"><strong>개인정보 처리 안내 초안:</strong> 본 페이지는 데모이며 현재 개인정보를 수집·저장·전송하지 않습니다. 실제 운영 전에는 한국의 개인정보 보호 관련 법령을 검토하고, 정확한 개인정보 처리방침과 동의 문구를 게시하세요.</div></div></section>
+</main>
+<footer><div class="wrap footer-row"><div class="footer-brand"><div class="logo">MEN<span>HANCE</span></div><p>© <span id="year"></span> MENHANCE. All rights reserved.</p><p>운영자명 · 사업자 정보 · 실제 서비스 주소 및 고객 문의처를 추가해 주세요.</p></div><div class="footer-links"><a href="#booking">예약 문의</a><a href="#faq">자주 묻는 질문</a><a href="#privacy-note">개인정보 처리 안내</a><a href="#top">맨 위로 ↑</a></div></div></footer>
+<div class="mobile-cta"><a class="btn btn-primary" href="#booking">비공개 예약 문의하기 →</a></div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  const submitButton = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    const token = window.turnstile ? window.turnstile.getResponse() : '';
+    if (!token) { status.textContent = '보안 인증을 완료해 주세요.'; return; }
+    const payload = {
+      topic: document.getElementById('topic').value,
+      name: document.getElementById('name').value.trim(),
+      contact: document.getElementById('contact').value.trim(),
+      time: document.getElementById('time').value,
+      consent: document.getElementById('consent').checked,
+      website: document.getElementById('website').value,
+      turnstileToken: token
+    };
+    submitButton.disabled = true;
+    status.textContent = '문의 내용을 전송하고 있습니다.';
+    try {
+      const response = await fetch('/api/submit', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        credentials: 'same-origin', body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || '전송에 실패했습니다. 다시 시도해 주세요.');
+      status.textContent = '문의가 접수되었습니다. 감사합니다.';
+      form.reset();
+      if (window.turnstile) window.turnstile.reset();
+    } catch (error) {
+      status.textContent = error.message;
+      if (window.turnstile) window.turnstile.reset();
+    } finally { submitButton.disabled = false; }
+  });
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</body>
+</html>

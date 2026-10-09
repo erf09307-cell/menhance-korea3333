@@ -1,0 +1,4 @@
+import {createSession,cookieHeader,json,sameOrigin} from "../../_utils.js";
+const encoder=new TextEncoder();
+function constantTimeEqual(a,b){const aa=encoder.encode(a),bb=encoder.encode(b);let diff=aa.length^bb.length;const n=Math.max(aa.length,bb.length);for(let i=0;i<n;i++)diff|=(aa[i]||0)^(bb[i]||0);return diff===0;}
+export async function onRequestPost({request,env}){if(!sameOrigin(request))return json({error:"잘못된 요청입니다."},403);if(!env.ADMIN_PASSWORD||!env.SESSION_SECRET)return json({error:"관리자 로그인이 아직 설정되지 않았습니다."},503);let data;try{data=await request.json()}catch{return json({error:"요청 형식이 올바르지 않습니다."},400)}const password=typeof data.password==="string"?data.password:"";if(password.length>512||!constantTimeEqual(password,env.ADMIN_PASSWORD))return json({error:"비밀번호가 올바르지 않습니다."},401);const session=await createSession(env.SESSION_SECRET);return json({ok:true},200,{"Set-Cookie":cookieHeader(session)});}

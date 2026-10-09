@@ -1,0 +1,3 @@
+import {isValidSession,json,sameOrigin} from "../../_utils.js";
+export async function onRequestGet({request,env}){if(!env.SESSION_SECRET||!env.LEADS_DB)return json({error:"서버 설정이 완료되지 않았습니다."},503);if(!(await isValidSession(request,env.SESSION_SECRET)))return json({error:"로그인이 필요합니다."},401);try{const r=await env.LEADS_DB.prepare("SELECT id,topic,name,contact,preferred_time,status,created_at FROM leads ORDER BY id DESC LIMIT 200").all();return json({leads:r.results||[]})}catch{return json({error:"문의 목록을 불러오지 못했습니다."},500)}}
+export async function onRequestPost({request}){if(!sameOrigin(request))return json({error:"잘못된 요청입니다."},403);return json({error:"Method not allowed"},405,{Allow:"GET"})}
